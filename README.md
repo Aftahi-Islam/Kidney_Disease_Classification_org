@@ -13,7 +13,7 @@
 9. Update the dvc.yaml
 10. app.py
 
-# How to run?
+## How to run?
 ### STEPS:
 
 Clone the repository
@@ -42,14 +42,10 @@ activate
 pip install -r requirements.txt
 ```
 
+### STEP 03- Run the main project file
 ```bash
 # Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up you local host and port
+python main.py
 ```
 
 
@@ -61,28 +57,40 @@ open up you local host and port
 
 - [Documentation](https://mlflow.org/docs/latest/index.html)
 
-- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
+### MLflow install using `pip` (If needed)
+```bash
+pip install mlflow
+```
 
-##### cmd
-- mlflow ui
+## dagshub
+- [Dagshub Website](https://dagshub.com/)
 
-### dagshub
-[dagshub](https://dagshub.com/)
+### dagshub install using `pip` (If needed)
+```bash
+pip install dagshub
+``` 
 
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
-python script.py
+### Update this information as per following the user type - 
+ 
 
-Run this to export as env variables:
+The `MLFLOW_TRACKING_URI` is the ML flow Tracking remote link of this repository, the `MLFLOW_TRACKING_USERNAME` is the "Username" of the User and also the `MLFLOW_TRACKING_PASSWORD` is the "Personal Generated-Token" of the User.
+
+> MLFLOW_TRACKING_URI=https://dagshub.com/user_name/repository_name.mlflow <br>
+> MLFLOW_TRACKING_USERNAME=**user_name** <br>
+> MLFLOW_TRACKING_PASSWORD=**personal access-token**
+
+
+
+
+### Run this to export as env variables in `Git Bash` terminal:
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/Aftahiislam007/Kidney_Disease_Classification.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+export MLFLOW_TRACKING_USERNAME=Aftahiislam007 
 
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+export MLFLOW_TRACKING_PASSWORD=52e4eb244e8eae6cd6c5a140e7413f13bf02852f
 
 ```
 
