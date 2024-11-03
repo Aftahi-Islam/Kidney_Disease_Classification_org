@@ -162,6 +162,5 @@ cython_debug/
 artifacts/*
 kidney/*
 mlruns/*
-dvc.lock
 scores.json
 
