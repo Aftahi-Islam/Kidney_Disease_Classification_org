@@ -15,10 +15,10 @@ class ConfigurationManager:
         create_directories([self.config.artifacts_root])
         
     def get_data_ingestion_config(self) -> DataIngestionConfig:
-        # config = self.config.data_ingestion
-        config = self.config.get('data_ingestion')
-        if not config:
-            raise KeyError("The 'data_ingestion' section is missing in the config.yaml file.")
+        config = self.config.data_ingestion
+        # config = self.config.get('data_ingestion')
+        # if not config:
+        #     raise KeyError("The 'data_ingestion' section is missing in the config.yaml file.")
         
         create_directories([config.root_dir])
         
