@@ -116,22 +116,6 @@ dvc dag
 ```
 
 
-## About MLflow & DVC
-
-MLflow
-
- - Its Production Grade
- - Trace all of your expriements
- - Logging & taging your model
-
-
-DVC 
-
- - Its very lite weight for POC only
- - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines)
-
-
 
 # AWS-CICD-Deployment-with-Github-Actions
 
@@ -150,13 +134,13 @@ DVC
 
 	1. Build docker image of the source code
 
-	2. Push your docker image to ECR
+	2. Push the docker image to ECR
 
-	3. Launch Your EC2 
+	3. Launch the EC2 
 
-	4. Pull Your image from ECR in EC2
+	4. Pull the image from ECR in EC2
 
-	5. Lauch your docker image in EC2
+	5. Lauch the docker image in EC2
 
 	#Policy:
 

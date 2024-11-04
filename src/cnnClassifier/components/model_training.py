@@ -1,4 +1,5 @@
 import os
+import shutil
 import urllib.request as request
 from zipfile import ZipFile
 import tensorflow as tf
@@ -93,3 +94,10 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+        
+        
+    # def copyFile():
+    #     file_to_copy = '../../../artifacts/training/model.h5'
+    #     destination_directory = '../../../model'
+
+    #     shutil.copy(file_to_copy, destination_directory)
