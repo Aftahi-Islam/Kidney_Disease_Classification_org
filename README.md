@@ -1,4 +1,4 @@
-# Kidney Disease Classification using MLflow and DVC
+<h1 align="center">Kidney Disease Classification using MLflow and DVC</h1>
 
 ## Workflows
 
@@ -123,34 +123,35 @@ dvc dag
 
 ## 2. Create IAM user for deployment
 
-	#with specific access
+###	With Specific Access
 
-	1. EC2 access : It is virtual machine
+>1. **EC2 access :** It is virtual machine
+>
+>2. **ECR :** Elastic Container registry to save your docker image in aws
 
-	2. ECR: Elastic Container registry to save your docker image in aws
 
+### Description: About the Deployment
 
-	#Description: About the deployment
+>1. Build docker image of the source code
+>
+>2. Push the docker image to ECR
+>
+>3. Launch the EC2 
+>
+>4. Pull the image from ECR in EC2
+>
+>5. Lauch the docker image in EC2
 
-	1. Build docker image of the source code
+### Policy:
 
-	2. Push the docker image to ECR
-
-	3. Launch the EC2 
-
-	4. Pull the image from ECR in EC2
-
-	5. Lauch the docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
+>1. AmazonEC2ContainerRegistryFullAccess
+>
+>2. AmazonEC2FullAccess
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
+
+>- **Save the URI :** 307946679963.dkr.ecr.eu-north-1.amazonaws.com/kidney
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -158,36 +159,49 @@ dvc dag
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
-	#optinal
+### Optinal
 
-	sudo apt-get update -y
+```bash
+sudo apt-get update -y
+```
 
-	sudo apt-get upgrade
+```bash
+sudo apt-get upgrade
+```
 	
-	#required
+### Required
 
-	curl -fsSL https://get.docker.com -o get-docker.sh
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+```
 
-	sudo sh get-docker.sh
+```bash
+sudo sh get-docker.sh
+```
 
-	sudo usermod -aG docker ubuntu
+```bash
+sudo usermod -aG docker ubuntu
+```	
 
-	newgrp docker
+```bash
+newgrp docker
+```	
 	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
+	
+## 6. Configure EC2 as self-hosted runner:
+>settings > actions > runner > new self hosted runner > choose os > then run command one by one
 
 
-# 7. Setup github secrets:
+## 7. Setup github secrets:
 
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
+>AWS_ACCESS_KEY_ID=
+>
+>AWS_SECRET_ACCESS_KEY=
+>
+>AWS_REGION = eu-north-1
+>
+>AWS_ECR_LOGIN_URI = demo>>  307946679963.dkr.ecr.eu-north-1.amazonaws.com
+>
+>ECR_REPOSITORY_NAME = kidney
 
 
